@@ -26,6 +26,9 @@ public:
         }
         while(!q.empty() && freshCount){
             int size = q.size();
+            if(freshCount == 0){
+                return level;
+            }
             while(size--){
                 pair<int,int> node = q.front();
                 q.pop();
@@ -36,13 +39,7 @@ public:
                         q.push({newx, newy});
                         grid[newx][newy] = 2;
                         freshCount--;
-                        if(freshCount == 0){
-                            break;
-                        }
                     }
-                }
-                if(freshCount == 0){
-                    break;
                 }
             }
             level++;
@@ -52,4 +49,3 @@ public:
 };
 
 
-TC = O(row * col)
