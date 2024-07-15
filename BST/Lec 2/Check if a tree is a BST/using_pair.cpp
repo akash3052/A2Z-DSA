@@ -2,6 +2,7 @@
 class Solution {
 public:
     // pair<bool, <max,min>> 
+    // This function is returing max and min of entire tree along with a boolean value.
     pair<bool, pair<long long int  ,long long int>> isBst(TreeNode* root){
         if(root == NULL){
             // return {true, {INT_MIN, INT_MAX}};
