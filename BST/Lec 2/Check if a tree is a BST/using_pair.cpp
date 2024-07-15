@@ -11,6 +11,7 @@ public:
         auto lst = isBst(root->left);
         auto rst = isBst(root->right);
         if(lst.first && rst.first && root->val > lst.second.first && root->val < rst.second.second){
+            // Note : without typecasting root->val to long long, it was throwing error
             return {true, {max((long long)root->val, rst.second.first), min((long long)root->val, lst.second.second)}};
         }else{
             return {false, {max({(long long)root->val, lst.second.first, rst.second.first}) , min({(long long)root->val, lst.second.second, rst.second.second}) } };
