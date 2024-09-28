@@ -1,3 +1,6 @@
+// Note : If we are going from 0 to n-1 in memoization, then in tabulation we will go opposite (n-1 to 0). It's a thumb rule.
+
+
 class Solution {
 public:
     int rob(vector<int>& nums) {
