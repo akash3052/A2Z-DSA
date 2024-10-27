@@ -26,3 +26,11 @@ public:
 };
 
 
+// TC = O(n * 2)
+// SC = O(n * 2)
+
+we have reduced the space complexity in tabulation
+
+
+
+
